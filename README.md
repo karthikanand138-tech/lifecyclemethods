@@ -27,11 +27,11 @@ Step 7: Save and run the application.
 
 ## PROGRAM:
 ```
-/*
+
 Program to print the text “Hello World”.
-Developed by:AKSHAYA S
-Registeration Number :212223220006
-*/
+Developed by: KARTHIK A
+Registeration Number :212225220049
+
 ```
 
 
