@@ -27,75 +27,116 @@ Step 7: Save and run the application.
 
 ## PROGRAM:
 ```
-
+/*
 Program to print the text “Hello World”.
-Developed by: KARTHIK A
-Registeration Number : 212225220049
+Developed by:AKSHAYA S
+Registeration Number :212223220006
+*/
+```
 
-package com.example.lifecyclemethodss;
+
+## MainActivity.java:
+```
+
+package com.example.andriodlifecycle;
 
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        Toast toast = Toast.makeText(getApplicationContext(), "onCreate Called", Toast.LENGTH_LONG);
+        Toast toast= Toast.makeText(getApplicationContext(),"OnCreated Executed",Toast.LENGTH_LONG);
         toast.show();
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
     }
 
-    protected void onStart() {
+    protected void onStart(){
         super.onStart();
-        Toast toast = Toast.makeText(getApplicationContext(), "onStart Called", Toast.LENGTH_LONG);
+        Toast toast= Toast.makeText(getApplicationContext(),"OnStart Executed",Toast.LENGTH_LONG);
         toast.show();
     }
 
-    protected void onRestart() {
-        super.onRestart();
-        Toast toast = Toast.makeText(getApplicationContext(), "onRestart Called", Toast.LENGTH_LONG);
-        toast.show();
-    }
-
-    protected void onPause() {
-        super.onPause();
-        Toast toast = Toast.makeText(getApplicationContext(), "onPause Called", Toast.LENGTH_LONG);
-        toast.show();
-    }
-
-    protected void onResume() {
+    protected void onResume(){
         super.onResume();
-        Toast toast = Toast.makeText(getApplicationContext(), "onResume Called", Toast.LENGTH_LONG);
+        Toast toast= Toast.makeText(getApplicationContext(),"OnResume Executed",Toast.LENGTH_LONG);
         toast.show();
     }
 
-    protected void onStop() {
+    protected void onPause(){
+        super.onPause();
+        Toast toast= Toast.makeText(getApplicationContext(),"onPause Executed",Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onStop(){
         super.onStop();
-        Toast toast = Toast.makeText(getApplicationContext(), "onStop Called", Toast.LENGTH_LONG);
+        Toast toast= Toast.makeText(getApplicationContext(),"onStop Executed",Toast.LENGTH_LONG);
         toast.show();
     }
 
-    protected void onDestroy() {
+    protected void onRestart(){
+        super.onRestart();
+        Toast toast= Toast.makeText(getApplicationContext(),"onRestart Executed",Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    protected void onDestroy(){
         super.onDestroy();
-        Toast toast = Toast.makeText(getApplicationContext(), "onDestroy Called", Toast.LENGTH_LONG);
+        Toast toast= Toast.makeText(getApplicationContext(),"onDestroy Executed",Toast.LENGTH_LONG);
         toast.show();
     }
 }
 ```
+## activitymain.xml:
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Andriod LifeCycle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
 ## OUTPUT
-<img width="1918" height="1018" alt="image" src="https://github.com/user-attachments/assets/133475ef-7635-4e41-b4c6-0435435c15e3" />
+## 1. OnCreate Executed:
+<img width="1917" height="1078" alt="Screenshot 2026-07-21 092829" src="https://github.com/user-attachments/assets/c57354b6-7984-4edc-a439-76baa938c87a" />
 
-<img width="1918" height="1013" alt="image" src="https://github.com/user-attachments/assets/0c9f886e-1f5b-4f9a-b502-fc40dcdec2dd" />
+## 2. OnStart Executed:
+<img width="1912" height="1072" alt="Screenshot 2026-07-21 093522" src="https://github.com/user-attachments/assets/cdada082-2000-4133-9710-b3fad7cde5f4" />
 
-<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/709c99fe-b7d4-40ae-a775-c8a03af5068c" />
-<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/a28ebb6f-35e2-437d-a70c-86af50a080c0" />
-<img width="1918" height="1015" alt="image" src="https://github.com/user-attachments/assets/76c4275c-c805-4ffa-ad9f-424a9564c09d" />
+## 3. OnResume Executed:
+<img width="1918" height="1077" alt="Screenshot 2026-07-23 111651" src="https://github.com/user-attachments/assets/6903f08f-8c6b-48b2-a6e6-3987d1aa3a50" />
 
+## 4. OnPause Executed:
+
+<img width="1917" height="1022" alt="Screenshot 2026-07-23 112917" src="https://github.com/user-attachments/assets/8983e722-b8e4-4298-ad6f-24fb3eef67ad" />
 
 
 ## RESULT
