@@ -126,13 +126,15 @@ public class MainActivity extends AppCompatActivity {
 ```
 ## OUTPUT
 ## 1. OnCreate Executed:
-<img width="1917" height="1078" alt="Screenshot 2026-07-21 092829" src="https://github.com/user-attachments/assets/c57354b6-7984-4edc-a439-76baa938c87a" />
+<img width="1721" height="931" alt="Screenshot 2026-11-24 100542" src="https://github.com/user-attachments/assets/da08e47c-8d35-4e20-b8e7-0df165ff92be" />
 
 ## 2. OnStart Executed:
-<img width="1912" height="1072" alt="Screenshot 2026-07-21 093522" src="https://github.com/user-attachments/assets/cdada082-2000-4133-9710-b3fad7cde5f4" />
+
+<img width="1727" height="932" alt="Screenshot 2026-11-24 100613" src="https://github.com/user-attachments/assets/46d2f582-da02-4a04-a0dc-00fbd3849449" />
 
 ## 3. OnResume Executed:
-<img width="1918" height="1077" alt="Screenshot 2026-07-23 111651" src="https://github.com/user-attachments/assets/6903f08f-8c6b-48b2-a6e6-3987d1aa3a50" />
+
+<img width="1722" height="930" alt="Screenshot 2026-11-24 100650" src="https://github.com/user-attachments/assets/f80190b5-899e-41eb-9ebb-7951d63495e6" />
 
 ## 4. OnPause Executed:
 
